@@ -25,7 +25,9 @@
                 </div>
                 <div class="col-6 mx-auto">
                     <ul class="list-group">
-                        <li v-for="task in tasks" class="list-group-item">{{task.text}}</li>
+                        <li v-for="task in tasks" class="d-flex justify-content-between list-group-item">{{task.text}}
+                            <button type="button" class="btn-close" aria-label="Close"></button>
+                        </li>
                     </ul>
                 </div>
             </div>
