@@ -12,10 +12,10 @@ const root = new Vue({
         userTask: '',   // Stringa che conterra la nuova task, inizialmente vuota
         tasks: [
             { text: 'Capire se ho capito', done: true, },
-            { text: 'Controllare la propria sanità mentale', done: false, },
+            { text: 'Controllare la propria salute', done: false, },
             { text: 'Usare meno il meme di pepe e i suoi derivati', done: false, },
             { text: 'Trattare meglio la paperella', done: false, },
-            { text: 'Evitare attacchi di panico', done: false, },
+            { text: 'Pagare le tasse', done: false, },
         ],
     },
 
