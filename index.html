@@ -25,8 +25,9 @@
                 </div>
                 <div class="col-6 mx-auto">
                     <ul class="list-group">
-                        <li v-for="(task, index) in tasks" class="d-flex justify-content-between list-group-item">
-                            <span class="delate">{{task.text}}</span>
+                        <li v-for="(task, index) in tasks" class="d-flex justify-content-between list-group-item"
+                            @click="changeDoneAttribute(index)">
+                            <span :class='{delate: task.done}'>{{task.text}}</span>
                             <button type="button" class="btn-close" aria-label="Close"
                                 @click="removeTask(index)"></button>
                         </li>
