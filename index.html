@@ -24,6 +24,12 @@
                     <h1 class="text-center">La mia lista di cose da fare</h1>
                 </div>
                 <div class="col-6 mx-auto">
+                    <div class="input-group mb-3">
+                        <!-- input -->
+                        <input type="text" class="form-control" placeholder="Aggiungi qualcosa da fare"
+                            v-model="userTask">
+                        <button class="btn btn-outline-secondary" type="button" @click="addTask">Aggiungi</button>
+                    </div>
                     <ul class="list-group">
                         <li v-for="(task, index) in tasks" class="d-flex justify-content-between list-group-item"
                             @click="changeDoneAttribute(index)">

@@ -9,6 +9,7 @@ const root = new Vue({
     el: '#root',
 
     data: {
+        userTask: '',   // Stringa che conterra la nuova task, inizialmente vuota
         tasks: [
             { text: 'Capire se ho capito', done: true, },
             { text: 'Controllare la propria sanità mentale', done: false, },
@@ -25,7 +26,17 @@ const root = new Vue({
         },
 
         changeDoneAttribute(index) {
-            this.tasks[index].done = !this.tasks[index].done;
+            this.tasks[index].done = !this.tasks[index].done; //Trasforma questo oggetto nel contrario di se stesso (funziona se booleano)
+        },
+
+        addTask() {
+            const userTask = this.userTask.trim() // Ricaviamo ciò che l'utente voleva aggiungere in una costante
+            if (this.userTask) {
+
+                this.tasks.push({ text: userTask, done: false }); // facciamo il push di cio che ci ha scritto l'utente (in questo caso ciò che ci scrive con l'imput)   
+
+                this.userTask = '';
+            }
         },
     },
 });
