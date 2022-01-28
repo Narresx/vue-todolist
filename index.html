@@ -30,7 +30,7 @@
                             v-model="userTask">
                         <button class="btn btn-outline-secondary" type="button" @click="addTask">Aggiungi</button>
                     </div>
-                    <ul class="list-group">
+                    <ul v-if="tasks.length >= 1" class="list-group">
                         <li v-for="(task, index) in tasks" class="d-flex justify-content-between list-group-item"
                             @click="changeDoneAttribute(index)">
                             <span :class='{delate: task.done}'>{{task.text}}</span>
@@ -38,6 +38,7 @@
                                 @click="removeTask(index)"></button>
                         </li>
                     </ul>
+                    <h2 v-else class="text-center">Non ci sono cose da fare segnate</h2>
                 </div>
             </div>
         </div>
